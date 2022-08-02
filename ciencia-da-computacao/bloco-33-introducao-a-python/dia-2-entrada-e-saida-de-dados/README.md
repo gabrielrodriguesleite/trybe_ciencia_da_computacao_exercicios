@@ -44,6 +44,15 @@ print(h) # saida 1
 print(t) # saida [2, 3]
 ```
 
+### Erros na saída padrão
+
+```py
+import sys
+
+err = "Arquivo não encontrado"
+print(f"Erro: {err}", file=sys.stderr)
+```
+
 ### Explorando o limite do sistema de abrir arquivos
 
 ```py
