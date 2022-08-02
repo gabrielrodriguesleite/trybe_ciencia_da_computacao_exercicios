@@ -4,6 +4,22 @@
 
 ### JSON com arquivo de dados de jogos
 
+### Print
+
+```py
+
+# print sem quebra de linha
+print("Na mesma", end=" ")
+print("Linha") # saída "Na mesma Linha
+
+# formatar precisão
+print(f"3 / 4 = {3 / 4:.2f}") # saída 3 / 4 = 0.75
+
+# centralizar
+item = '(G)'
+print(f"{item:.^20}") # saida '........(G).........'
+```
+
 ### Escrevendo um arquivo
 
 ```py
