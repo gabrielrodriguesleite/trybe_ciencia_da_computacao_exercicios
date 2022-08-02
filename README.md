@@ -9,3 +9,13 @@ sudo apt install python3-venv
 python3 -m venv .ambiente
 source .ambiente/bin/activate
 ```
+
+## Para ativar o linter no vscode:
+
+Ctrl+Shift+P → "Select Linter" → flake8
+
+## Para formatar o arquivo com black:
+
+```sh
+python3 -m black nomes_dos_arquivos.py
+```
