@@ -42,6 +42,10 @@ for game in video_games:
 
 mean_review_score_by_genre = {}
 for genre, scores in scores_by_genre.items():
-    mean_review_score_by_genre[genre] = sum(scores)/len(scores)
+    mean_review_score_by_genre[genre] = sum(scores) / len(scores)
 
 print(mean_review_score_by_genre)
+
+# persistindo em arquivos
+with open("review_by_genre.json", "w") as file:
+    json.dump(mean_review_score_by_genre, file)
