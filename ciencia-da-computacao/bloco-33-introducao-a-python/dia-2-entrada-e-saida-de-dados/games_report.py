@@ -3,8 +3,8 @@ import json
 # json.load carrega do arquivo
 # json.loads carrega de variavel
 
-file = open("data/video_games.json", "r")
-video_games = json.load(file)
-file.close()
+with open("data/video_games.json", "r") as file:
+    video_games = json.load(file)
+
 
 print(type(video_games))
