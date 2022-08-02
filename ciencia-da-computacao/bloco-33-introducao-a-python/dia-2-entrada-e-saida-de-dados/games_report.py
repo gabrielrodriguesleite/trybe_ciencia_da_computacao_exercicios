@@ -19,14 +19,29 @@ finally:
 # generos
 game_genres = set()
 for game in video_games:
-    for genre in game["Metadata"]["Genres"].split(','):
+    for genre in game["Metadata"]["Genres"].split(","):
         game_genres.add(genre)
 
-print(game_genres)
+# print(game_genres)
 
 # consoles
 consoles = set()
 for game in video_games:
     consoles.add(game["Release"]["Console"])
 
-print(consoles)
+# print(consoles)
+
+# media de pontuação das categorias
+scores_by_genre = {genre: [] for genre in game_genres}
+
+for game in video_games:
+    for genre in game["Metadata"]["Genres"].split(","):
+        scores_by_genre[genre].append(game["Metrics"]["Review Score"])
+
+# print(scores_by_genre)
+
+mean_review_score_by_genre = {}
+for genre, scores in scores_by_genre.items():
+    mean_review_score_by_genre[genre] = sum(scores)/len(scores)
+
+print(mean_review_score_by_genre)
