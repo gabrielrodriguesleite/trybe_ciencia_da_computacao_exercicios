@@ -8,6 +8,9 @@
 
 ```py
 
+# print separador
+print("Valores", 42, 654, 12, sep=", ") # saída Valores, 42, 654, 12
+
 # print sem quebra de linha
 print("Na mesma", end=" ")
 print("Linha") # saída "Na mesma Linha
