@@ -106,4 +106,21 @@ import pytest
 from datetime import date
 
 print(date.today().isoformat()) # '2022-08-03'
+
+def exemplo_recover_expired_drugs(drugs_recover)
+    today = date.today().isoformat()
+    return [
+      drug for drug in drugs_recover() if drug["data_de_validade"] < today
+    ]
 ```
+
+# Exercícios do dia
+
+🚀 Exercício 1: Escreva um programa que retorne uma lista com os valores numéricos de 1 a N, mas com as seguintes exceções:
+
+- Números divisíveis por 3 deve aparecer como "Fizz" ao invés do número;
+- Números divisíveis por 5 devem aparecer como "Buzz" ao invés do número;
+- Números divisíveis por 3 e 5 devem aparecer como "FizzBuzz" ao invés do número.
+
+Exemplo: 3 -> [1, 2, "Fizz"].
+
