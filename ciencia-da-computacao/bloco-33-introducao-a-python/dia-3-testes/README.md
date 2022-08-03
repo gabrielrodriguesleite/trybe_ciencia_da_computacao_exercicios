@@ -77,3 +77,33 @@ def test_a_minha_funcao(stock):
     assert "dados retornados da minha função" in report
 ```
 
+## Teste de excessão
+
+```py
+## Esse é o exemplo bugado do Eli
+import pytest
+
+from pasta.arquivo import funcao_que_da_erro
+
+def teste_se_teve_erro():
+    with pytest.raises(ValueError, match="mensagem do erro"):
+      # contexto onde se espera a excessão
+      funcao_que_da_erro("um parametro que causa erro")
+
+## ASSIM ESTÁ NA DOCUMENTAÇÃO https://docs.pytest.org/en/7.1.x/reference/reference.html?highlight=raises#pytest.raises
+
+with pytest.raises(ValueError) as exc_info:
+    raise ValueError("value must be 42")
+assert exc_info.type is ValueError
+assert exc_info.value.args[0] == "value must be 42"
+
+```
+
+## Teste com data
+
+```py
+import pytest
+from datetime import date
+
+print(date.today().isoformat()) # '2022-08-03'
+```
