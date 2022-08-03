@@ -1,5 +1,19 @@
 # TDD em python - Testes
 
+Para executar todos os testes execute na pasta do ambiente o seguinte comando
+
+```sh
+pytest
+```
+
+Se não rodar por conta dos imports tente
+
+```sh
+python3 -m pytest
+```
+
+A tag -v aumenta a verbosidade do resultado do teste
+
 Dos mesmos autores do J-unity do java:
 
 ###### REFERÊNIAS
@@ -27,4 +41,16 @@ def test_answer():
     assert inc(3) == 5
     # assert 1 == 1 # saída ''(nada)
     # assert 1 == 0 # saída AssertionError
+```
+
+# Ambiente virtual e dev requirementes
+
+```sh
+python3 -m venv .venv && source .venv/bin/activate
+
+```
+
+./dev-requirementes.txt
+```txt
+pytest
 ```
