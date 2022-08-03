@@ -1,18 +1,6 @@
 # TDD em python - Testes
 
-Para executar todos os testes execute na pasta do ambiente o seguinte comando
 
-```sh
-pytest
-```
-
-Se não rodar por conta dos imports tente
-
-```sh
-python3 -m pytest
-```
-
-A tag -v aumenta a verbosidade do resultado do teste
 
 Dos mesmos autores do J-unity do java:
 
@@ -49,11 +37,29 @@ def test_answer():
 python3 -m venv .venv && source .venv/bin/activate
 
 ```
+## Instalar as dependencias de projeto python
 
-./dev-requirementes.txt
-```txt
+Projeto possuindo um arquivo requirements.txt
+./dev-requirements.txt
+
+```sh
+pip install -r dev-requirements.txt
+```
+
+## Executar os tests com pytest
+Para executar todos os testes execute na pasta do ambiente o seguinte comando
+
+```sh
 pytest
 ```
+
+Se não rodar por conta dos imports tente
+
+```sh
+python3 -m pytest
+```
+
+A tag -v aumenta a verbosidade do resultado do teste
 
 ## Fixture (lê-se fik-chur)
 
@@ -70,3 +76,4 @@ def test_a_minha_funcao(stock):
     report = minha_funcao(stock)
     assert "dados retornados da minha função" in report
 ```
+
