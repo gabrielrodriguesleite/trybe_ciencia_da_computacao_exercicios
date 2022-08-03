@@ -64,6 +64,7 @@ import pytest
 def stock():
     return [{"id":1},{"id":2},{"id":3}]
 
+# as fixtures devem ser colocadas em um arquivo separado e importadas
 
 def test_a_minha_funcao(stock):
     report = minha_funcao(stock)
