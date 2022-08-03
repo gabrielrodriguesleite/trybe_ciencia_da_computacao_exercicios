@@ -54,3 +54,18 @@ python3 -m venv .venv && source .venv/bin/activate
 ```txt
 pytest
 ```
+
+## Fixture (lê-se fik-chur)
+
+```py
+import pytest
+
+@pytest.fixture # decorador
+def stock():
+    return [{"id":1},{"id":2},{"id":3}]
+
+
+def test_a_minha_funcao(stock):
+    report = minha_funcao(stock)
+    assert "dados retornados da minha função" in report
+```
