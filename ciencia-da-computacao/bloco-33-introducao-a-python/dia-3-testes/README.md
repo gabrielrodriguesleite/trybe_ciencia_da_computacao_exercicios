@@ -151,3 +151,8 @@ Saídas correspondentes:
     Curiosidade: A frase "The quick brown fox jumps over the lazy dog" é um pantograma (frase com sentido em que são usadas todas as letras do alfabeto de determinada língua) da língua inglesa.
 
 Verifique casos como entrada maior que 30 caracteres, vazia e com caracteres inválidos.
+
+Para executar o teste rode
+```sh
+python3 -m pytest -v ciencia-da-computacao/bloco-33-introducao-a-python/dia-3-testes/exercicio-02.py
+```
