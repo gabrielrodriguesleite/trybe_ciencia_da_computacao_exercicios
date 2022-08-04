@@ -28,6 +28,24 @@ def validEmail(email):
     return True
 
 
+def throws_at_bad_email(email):
+    if not validEmail(email):
+        raise ValueError
+
+
+def validate_emails(email_arr):
+    valid = []
+    for email in email_arr:
+        try:
+            throws_at_bad_email(email)
+            valid.append(email)
+            break
+        except ValueError as e:
+            print(e)
+
+    return valid
+
+
 def test_validEmail_1():
     assert validEmail("nome@dominio.com") is True
     assert validEmail("errad#@dominio.com") is False
