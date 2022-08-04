@@ -154,7 +154,7 @@ Verifique casos como entrada maior que 30 caracteres, vazia e com caracteres inv
 
 Para executar o teste rode
 ```sh
-python3 -m pytest -v ciencia-da-computacao/bloco-33-introducao-a-python/dia-3-testes/exercicio-02.py
+python3 -m pytest -v ciencia-da-computacao/bloco-33-introducao-a-python/dia-3-testes/exercicio02.py
 ```
 
  🚀 **Exercício 3** Faça uma função que valide um e-mail, lançando uma exceção quando o valor for inválido. Endereços de e-mail válidos devem seguir as seguintes regras:
@@ -168,3 +168,6 @@ python3 -m pytest -v ciencia-da-computacao/bloco-33-introducao-a-python/dia-3-te
 🦜 As funções isalpha e isdigit podem ser utilizadas para verificar se uma letra ou palavra são compostas de somente caracteres ou dígitos. Exemplo: `"1".isaplha() -> False , "a".isalpha() -> True.`
 
 Exemplo: `["nome@dominio.com", "errad#@dominio.com", "outro@dominio.com"] -> ["nome@dominio.com", "outro@dominio.com"].`
+
+**Exercício 4** Baseado no exercício anterior, escreva uma função que, dado uma lista de emails, deve retornar somente os emails válidos. Caso uma exceção ocorra, apenas a escreva na tela.
+Exemplo: `["nome@dominio.com", "errad#@dominio.com", "outro@dominio.com"] -> ["nome@dominio.com", "outro@dominio.com"]`.
