@@ -33,34 +33,7 @@ def throws_at_bad_email(email):
         raise ValueError
 
 
-def validate_emails(email_arr):
-    valid = []
-    for email in email_arr:
-        try:
-            throws_at_bad_email(email)
-            valid.append(email)
-            continue
-        except ValueError as e:
-            print(e)
-
-    return valid
-
-
 def test_validEmail_1():
     assert validEmail("nome@dominio.com") is True
     assert validEmail("errad#@dominio.com") is False
     assert validEmail("outro@dominio.com") is True
-
-
-def test_valid_email_array():
-    assert validate_emails(
-        ["nome@dominio.com", "errad#@dominio.com", "outro@dominio.com"]
-    ) == ["nome@dominio.com", "outro@dominio.com"]
-
-
-if __name__ == "__main__":
-    print(
-        validate_emails(
-            ["nome@dominio.com", "errad#@dominio.com", "outro@dominio.com"]
-        )
-    )
