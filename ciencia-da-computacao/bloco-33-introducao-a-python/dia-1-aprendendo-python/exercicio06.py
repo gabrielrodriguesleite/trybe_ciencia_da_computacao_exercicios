@@ -8,3 +8,7 @@ def triangleType(a, b, c):
     if a + b > c:
         return "Triangulo."
     return "Não é triangulo."
+
+
+def test_triangleType():
+    assert triangleType(3, 3, 3) == "Equilátero."
