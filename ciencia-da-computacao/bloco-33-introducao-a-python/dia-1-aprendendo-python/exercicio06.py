@@ -14,3 +14,4 @@ def test_triangleType():
     assert triangleType(3, 3, 3) == "Equilátero."
     assert triangleType(3, 2, 1) == "Escaleno."
     assert triangleType(6, 6, 12) == "Isóceles."
+    assert triangleType(6, 6, 10) == "Triangulo."
