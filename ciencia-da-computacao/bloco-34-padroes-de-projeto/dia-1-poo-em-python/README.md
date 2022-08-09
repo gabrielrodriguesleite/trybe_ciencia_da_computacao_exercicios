@@ -17,3 +17,13 @@ Todos os atributos devem ser privados.
 - diminuir_volume - diminui o volume de 1 em 1 até o mínimo de 0;
 - modificar_canal - altera o canal de acordo com o parâmetro recebido e deve lançar uma exceção (ValueError) caso o valor esteja fora dos limites;
 - ligar_desligar - alterna o estado da TV entre ligado e desligado (True/False).
+
+---
+
+# Exercício 2: Defina uma classe Estatistica que calcule média, mediana e moda de uma lista de números.
+
+<img width="50%" style="float: right" src="https://assets.app.betrybe.com/computer-science/design-patterns/poo-em-python/images/estatistica-uml-25e747f1d463dc113daedc8d3ac1f2ca.png" />
+
+🐦 Dica: Utilize métodos de classe.
+
+Diagrama de classes da Estatistica
