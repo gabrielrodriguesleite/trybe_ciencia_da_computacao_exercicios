@@ -35,6 +35,9 @@ def test_television_ligar_desligar():
     assert tv.canal == 1
     assert tv.ligada is False
     tv.ligar_desligar()
+    assert tv.tamanho == 50
+    assert tv.volume == 50
+    assert tv.canal == 1
     assert tv.ligada is True
     tv.ligar_desligar()
     assert tv.tamanho == 50
