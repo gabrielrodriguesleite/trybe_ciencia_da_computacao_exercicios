@@ -18,3 +18,11 @@ class television:
 
     def ligar_desligar(self):
         self.ligada = not self.ligada
+
+
+def test_television_created():
+    tv = television(50)
+    assert tv.tamanho == 50
+    assert tv.volume == 50
+    assert tv.canal == 1
+    assert tv.ligada is False
