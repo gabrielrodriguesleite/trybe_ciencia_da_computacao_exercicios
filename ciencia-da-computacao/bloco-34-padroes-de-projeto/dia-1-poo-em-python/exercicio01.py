@@ -30,10 +30,6 @@ def test_television_created():
 
 def test_television_ligar_desligar():
     tv = television(50)
-    assert tv.tamanho == 50
-    assert tv.volume == 50
-    assert tv.canal == 1
-    assert tv.ligada is False
     tv.ligar_desligar()
     assert tv.tamanho == 50
     assert tv.volume == 50
@@ -44,3 +40,26 @@ def test_television_ligar_desligar():
     assert tv.volume == 50
     assert tv.canal == 1
     assert tv.ligada is False
+
+
+def test_television_volume():
+    tv = television(32)
+    for i in range(10):
+        tv.aumentar_volume()
+
+    assert tv.volume == 60
+
+    for i in range(20):
+        tv.diminuir_volume()
+
+    assert tv.volume == 40
+
+    for i in range(100):
+        tv.diminuir_volume()
+
+    assert tv.volume == 0
+
+    for i in range(150):
+        tv.aumentar_volume()
+
+    assert tv.volume == 99
