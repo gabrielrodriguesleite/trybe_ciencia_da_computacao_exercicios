@@ -3,25 +3,41 @@ import pytest
 
 class television:
     def __init__(self, tamanho):
-        self.volume = 50
-        self.canal = 1
-        self.tamanho = tamanho
-        self.ligada = False
+        self.__volume = 50
+        self.__canal = 1
+        self.__tamanho = tamanho
+        self.__ligada = False
 
     def aumentar_volume(self):
-        self.volume = 99 if self.volume > 100 else self.volume + 1
+        self.__volume = 99 if self.__volume > 100 else self.__volume + 1
 
     def diminuir_volume(self):
-        self.volume = 0 if self.volume < 0 else self.volume - 1
+        self.__volume = 0 if self.__volume < 0 else self.__volume - 1
 
     def modificar_canal(self, canal):
         if canal > 99 or canal < 1:
             raise ValueError("canal fora de alcance")
 
-        self.canal = canal
+        self.__canal = canal
 
     def ligar_desligar(self):
-        self.ligada = not self.ligada
+        self.__ligada = not self.__ligada
+
+    @property
+    def volume(self):
+        return self.__volume
+
+    @property
+    def canal(self):
+        return self.__canal
+
+    @property
+    def tamanho(self):
+        return self.__tamanho
+
+    @property
+    def ligada(self):
+        return self.__ligada
 
 
 def test_television_created():
