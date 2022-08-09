@@ -15,3 +15,6 @@ class television:
     if 1 > canal > 99:
       raise ValueError
     self.canal = canal
+
+  def ligar_desligar(self):
+    self.ligada = not self.ligada
