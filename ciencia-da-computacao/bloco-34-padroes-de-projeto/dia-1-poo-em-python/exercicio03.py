@@ -1,14 +1,14 @@
 from math import pi
 import pytest
-from abc import ABC
+from abc import ABC, abstractmethod
 
 
 class geometryAbs(ABC):
-    @classmethod
+    @abstractmethod
     def area(self):
         pass
 
-    @classmethod
+    @abstractmethod
     def perimetro(self):
         pass
 
