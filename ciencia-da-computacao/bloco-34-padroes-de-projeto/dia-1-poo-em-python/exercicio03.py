@@ -38,6 +38,9 @@ class retangulo(geometryAbs):
         self.base = base
         self.altura = altura
         
+    def area(self):
+        return self.base * self.altura
+        
 
 if __name__ == '__main__':
     print(quadrado(4).area())
