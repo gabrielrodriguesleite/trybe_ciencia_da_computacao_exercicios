@@ -5,6 +5,14 @@ import pytest
 
 class Estatistica:
     def media(self, lista):
+        """Calculo de média aritimética dos números de uma lista
+
+        Args:
+            lista (array de números): um array de números
+
+        Returns:
+            float: a soma de todos os números dividido pela quantidade
+        """
         sum = 0
         for i in lista:
             sum += i
@@ -19,3 +27,4 @@ class Estatistica:
 def test_estatistica_media():
     assert Estatistica().media([1,2,3]) == 2.0
     assert Estatistica().media([5,4,9]) == 6.0
+    
