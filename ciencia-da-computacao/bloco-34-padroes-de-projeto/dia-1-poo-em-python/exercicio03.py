@@ -61,6 +61,10 @@ class circulo(geometryAbs):
     def area(self):
         return (pi * self.raio)**2
     
+    def perimetro(self):
+        return pi * self.raio * 2
+        
+    
 def test_circulo_area():
     assert circulo(10).area() == 986.9604401089358
     assert circulo(9).area() == 799.437956488238
