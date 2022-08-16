@@ -53,6 +53,10 @@ def test_retangulo_perimetro():
     assert retangulo(4, 5).perimetro() == 18
     assert retangulo(11, 12).perimetro() == 46
     
+class circulo(geometryAbs):
+    def __init__(self, raio) -> None:
+        self.raio = raio
+    
 def test_circulo_area():
     assert circulo(10).area() == 986.9604401089358
     assert circulo(9).area() == 799.437956488238
