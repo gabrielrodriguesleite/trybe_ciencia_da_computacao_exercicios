@@ -33,5 +33,11 @@ def test_quadrado_perimetro():
     assert quadrado(11).perimetro() == 44
 
 
+class retangulo(geometryAbs):
+    def __init__(self, base, altura):
+        self.base = base
+        self.altura = altura
+        
+
 if __name__ == '__main__':
     print(quadrado(4).area())
