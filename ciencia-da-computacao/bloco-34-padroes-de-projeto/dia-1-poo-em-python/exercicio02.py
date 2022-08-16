@@ -30,8 +30,27 @@ class Estatistica:
 
         return lista[int(len(lista)/2)]
 
-    def moda(self):
-        pass
+    def moda(self, lista):
+        """Cálculo de moda
+
+        Args:
+            lista (array de números): um array de números
+            
+        Returns:
+            número: O número que aparece com mais frequência em um conjunto de dados
+        """
+        lista.sort()
+        m = {}
+        for i in lista:
+            if i in m:
+                m[i] += 1
+            else:
+                m[i] = 1
+        o = 0
+        for j in m:
+            if m[j] > o:
+                o = j
+        return o
 
 def test_estatistica_media():
     assert Estatistica().media([1,2,3]) == 2.0
@@ -41,8 +60,12 @@ def test_estatistica_mediana():
     assert Estatistica().mediana([1,2,3]) == 2
     assert Estatistica().mediana([31,6,4,9]) == 20.0
     
+def test_estatistica_moda():
+    assert Estatistica().moda([1,1,2,3,3,3,3,4,4,5,5,5]) == 3
+    
 
 if __name__ == "__main__":
-    print(Estatistica().mediana([31,6,4,9]))
-    print(Estatistica().mediana([1,2,3]))
+    # print(Estatistica().mediana([31,6,4,9]))
+    # print(Estatistica().mediana([1,2,3]))
+    print(Estatistica().moda([1,1,2,3,3,3,3,4,4,5,5,5]))
     
