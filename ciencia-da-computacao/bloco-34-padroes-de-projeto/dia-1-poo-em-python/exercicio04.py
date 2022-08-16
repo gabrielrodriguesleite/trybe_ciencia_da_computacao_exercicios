@@ -29,16 +29,16 @@ class Log():
 
     def info(self, message):
         for m in self.manipuladores:
-            m.log(message)
+            m.log("INFO: " + message)
 
     def alerta(self, message):
         for m in self.manipuladores:
-            m.log(message)
+            m.log("ALERTA: " + message)
 
     def erro(self, message):
         for m in self.manipuladores:
-            m.log(message)
+            m.log("ERRO: " + message)
 
     def debug(self, message):
         for m in self.manipuladores:
-            m.log(message)
+            m.log("DEBUG: " + message)
