@@ -9,7 +9,7 @@ class ManipuladorDeLog(ABC):
 
 class LogEmArquivo(ManipuladorDeLog):
     def log(self, message):
-        print("print em arquivo")
+        print("log em arquivo")
 
 
 class LogEmTela(ManipuladorDeLog):
