@@ -17,4 +17,4 @@ class Estatistica:
         pass
 
 def test_estatistica_media():
-    assert Estatistica.media([1,2,3]) == 6
+    assert Estatistica().media([1,2,3]) == 6
