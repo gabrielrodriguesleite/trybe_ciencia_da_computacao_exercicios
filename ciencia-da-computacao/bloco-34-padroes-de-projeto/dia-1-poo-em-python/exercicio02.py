@@ -49,8 +49,8 @@ class Estatistica:
         o = 0
         for j in m:
             if m[j] > o:
-                o = j
-        return o
+                o = m[j]
+        return [f for f in m if m[f] == o][0]
 
 def test_estatistica_media():
     assert Estatistica().media([1,2,3]) == 2.0
@@ -62,6 +62,7 @@ def test_estatistica_mediana():
     
 def test_estatistica_moda():
     assert Estatistica().moda([1,1,2,3,3,3,3,4,4,5,5,5]) == 3
+    assert Estatistica().moda([155,13,22,33,35,35,34,4,446,56,56,35]) == 35
     
 
 if __name__ == "__main__":
