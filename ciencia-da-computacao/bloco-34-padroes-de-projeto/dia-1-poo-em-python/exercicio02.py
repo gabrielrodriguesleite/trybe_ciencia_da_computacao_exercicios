@@ -1,4 +1,4 @@
-class Estatisstica:
+class Estatistica:
     def media(self):
         pass
 
