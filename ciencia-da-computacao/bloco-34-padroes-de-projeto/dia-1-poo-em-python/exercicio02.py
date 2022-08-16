@@ -1,6 +1,8 @@
 from re import I
 
 
+import pytest
+
 class Estatistica:
     def media(self, lista):
         sum = 0
@@ -13,3 +15,6 @@ class Estatistica:
 
     def moda(self):
         pass
+
+def test_estatistica_media():
+    assert Estatistica.media([1,2,3]) == 6
