@@ -48,6 +48,10 @@ class retangulo(geometryAbs):
 def test_retangulo_area():
     assert retangulo(4, 5).area() == 20
     assert retangulo(11, 12).area() == 132
+    
+def test_retangulo_perimetro():
+    assert retangulo(4, 5).perimetro() == 18
+    assert retangulo(11, 12).perimetro() == 46
 
 if __name__ == '__main__':
     print(quadrado(4).area())
