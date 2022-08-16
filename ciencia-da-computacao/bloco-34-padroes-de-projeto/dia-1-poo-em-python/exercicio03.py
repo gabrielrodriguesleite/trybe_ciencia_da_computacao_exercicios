@@ -42,5 +42,9 @@ class retangulo(geometryAbs):
         return self.base * self.altura
         
 
+def test_retangulo_area():
+    assert retangulo(4, 5).area() == 20
+    assert retangulo(11, 12).area() == 132
+
 if __name__ == '__main__':
     print(quadrado(4).area())
