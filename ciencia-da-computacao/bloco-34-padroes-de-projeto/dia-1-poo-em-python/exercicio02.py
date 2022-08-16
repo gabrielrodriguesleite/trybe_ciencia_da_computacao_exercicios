@@ -8,7 +8,7 @@ class Estatistica:
         sum = 0
         for i in lista:
             sum += i
-        return sum
+        return sum / len(lista)
 
     def mediana(self):
         pass
@@ -17,4 +17,5 @@ class Estatistica:
         pass
 
 def test_estatistica_media():
-    assert Estatistica().media([1,2,3]) == 6
+    assert Estatistica().media([1,2,3]) == 2.0
+    assert Estatistica().media([5,4,9]) == 6.0
