@@ -28,3 +28,7 @@ def test_estatistica_media():
     assert Estatistica().media([1,2,3]) == 2.0
     assert Estatistica().media([5,4,9]) == 6.0
     
+def test_estatistica_mediana():
+    assert Estatistica().mediana([1,2,3]) == 2
+    assert Estatistica().mediana([32,6,4,9]) == 5.0
+    
