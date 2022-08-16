@@ -42,3 +42,13 @@ class Log():
     def debug(self, message):
         for m in self.manipuladores:
             m.log("DEBUG: " + message)
+
+
+"""
+TODO:
+- __log
+
+- __formatar
+
+- testes
+"""
