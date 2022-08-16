@@ -40,6 +40,9 @@ class retangulo(geometryAbs):
         
     def area(self):
         return self.base * self.altura
+    
+    def perimetro(self):
+        return self.base * 2 + self.altura * 2
         
 
 def test_retangulo_area():
