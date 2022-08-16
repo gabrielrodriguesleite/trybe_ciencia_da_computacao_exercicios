@@ -52,6 +52,11 @@ def test_retangulo_area():
 def test_retangulo_perimetro():
     assert retangulo(4, 5).perimetro() == 18
     assert retangulo(11, 12).perimetro() == 46
+    
+def test_circulo_area():
+    assert circulo(10).area() == 986.9604401089358
+    assert circulo(9).area() == 799.437956488238
+    
 
 if __name__ == '__main__':
     print(quadrado(4).area())
