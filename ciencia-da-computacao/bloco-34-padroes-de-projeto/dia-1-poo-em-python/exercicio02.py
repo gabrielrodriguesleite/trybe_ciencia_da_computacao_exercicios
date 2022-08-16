@@ -1,6 +1,3 @@
-from re import I
-
-
 import pytest
 
 class Estatistica:
@@ -18,8 +15,12 @@ class Estatistica:
             sum += i
         return sum / len(lista)
 
-    def mediana(self):
-        pass
+    def mediana(self, lista):
+        lista.sort()
+        if len(lista) % 2 == 0:
+            return (lista[int(len(lista)/2)] + lista[int(len(lista)/2)+1])/2
+
+        return lista[int(len(lista)/2)]
 
     def moda(self):
         pass
@@ -30,5 +31,10 @@ def test_estatistica_media():
     
 def test_estatistica_mediana():
     assert Estatistica().mediana([1,2,3]) == 2
-    assert Estatistica().mediana([32,6,4,9]) == 5.0
+    assert Estatistica().mediana([31,6,4,9]) == 20.0
+    
+
+if __name__ == "__main__":
+    print(Estatistica().mediana([31,6,4,9]))
+    print(Estatistica().mediana([1,2,3]))
     
