@@ -71,7 +71,7 @@ def test_circulo_area():
 
 def test_circulo_perimetro():
     assert circulo(10).perimetro() == 62.83185307179586
-    assert circulo(10).perimetro() == 56.548667764616276
+    assert circulo(9).perimetro() == 56.548667764616276
 
 if __name__ == '__main__':
     print(quadrado(4).area())
