@@ -16,6 +16,14 @@ class Estatistica:
         return sum / len(lista)
 
     def mediana(self, lista):
+        """Cálculo da mediana
+
+        Args:
+            lista (array de números): um array de números
+
+        Returns:
+            número: O valor central de um conjunto ordenado ou a média dos 2 valores centrais
+        """
         lista.sort()
         if len(lista) % 2 == 0:
             return (lista[int(len(lista)/2)] + lista[int(len(lista)/2)+1])/2
