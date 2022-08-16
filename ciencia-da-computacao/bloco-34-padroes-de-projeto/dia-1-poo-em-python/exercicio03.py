@@ -1,3 +1,4 @@
+from math import pi
 import pytest
 from abc import ABC
 
@@ -56,6 +57,9 @@ def test_retangulo_perimetro():
 class circulo(geometryAbs):
     def __init__(self, raio) -> None:
         self.raio = raio
+        
+    def area(self):
+        return (pi * self.raio)**2
     
 def test_circulo_area():
     assert circulo(10).area() == 986.9604401089358
