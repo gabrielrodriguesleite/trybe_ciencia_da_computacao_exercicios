@@ -3,8 +3,8 @@ from socketserver import DatagramRequestHandler, UDPServer
 
 class UDPHandler(DatagramRequestHandler):
     def handle(self):  # Método abstrato de DatagramRequestHandler
-        self.wfile.write(b'Ola, Cliente!\n')
-        data = self.rfile.readline().strip().decode('UTF-8')
+        self.wfile.write(b"Ola, Cliente!\n")
+        data = self.rfile.readline().strip().decode("UTF-8")
         print(data)
 
 

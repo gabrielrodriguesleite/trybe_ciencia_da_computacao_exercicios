@@ -3,11 +3,11 @@ from socketserver import StreamRequestHandler, TCPServer
 
 class TCPHandler(StreamRequestHandler):
     def handle(self):  # Método abstrato de StreamRequestHandler
-        self.wfile.write(b'Ola, Cliente!\n')
+        self.wfile.write(b"Ola, Cliente!\n")
         while True:
-            data = self.rfile.readline().strip().decode('UTF-8')
+            data = self.rfile.readline().strip().decode("UTF-8")
             if not data:
-                self.wfile.write(b'Cliente desconectado')
+                self.wfile.write(b"Cliente desconectado")
                 print("Cliente foi desconectado")
                 break
             print(data)
