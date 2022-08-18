@@ -4,7 +4,8 @@ class Carta:
         self.naipe = naipe
 
     def __repr__(self):
-        return '<%%s de %s>' % (self.valor, self.naipe)
+        return '<%s de %s>' % (self.valor, self.naipe)
+
 
 class Baralho:
     naipes = 'copas ouros espadas paus'.split()
