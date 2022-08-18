@@ -1,3 +1,12 @@
+from abc import ABC, abstractmethod
+
+
+class EstrategiaDeImposto(ABC):
+    @abstractmethod
+    def calcular(cls, valor):
+        raise NotImplementedError
+
+
 class Orcamento:
     def __init__(self, valor):
         self.valor = valor
