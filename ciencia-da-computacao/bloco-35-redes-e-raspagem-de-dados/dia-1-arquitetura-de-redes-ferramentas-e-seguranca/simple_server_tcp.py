@@ -18,3 +18,7 @@ if __name__ == "__main__":
     with TCPServer(server_address, TCPHandler) as server:
         print("O server está ON")
         server.serve_forever()
+
+
+# Acessar pelo navegador localhost:8080
+# ou pelo terminal com telnet localhost 8080
