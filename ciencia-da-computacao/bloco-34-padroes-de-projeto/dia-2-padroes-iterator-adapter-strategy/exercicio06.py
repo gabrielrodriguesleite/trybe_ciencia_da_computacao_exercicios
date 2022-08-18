@@ -13,6 +13,12 @@ class ISS(EstrategiaDeImposto):
         return valor * 0.1
 
 
+class ICMS(EstrategiaDeImposto):
+    @classmethod
+    def calcular(cls, valor):
+        return valor * 0.06
+
+
 class Orcamento:
     def __init__(self, valor):
         self.valor = valor
