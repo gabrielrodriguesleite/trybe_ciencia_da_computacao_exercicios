@@ -2,7 +2,8 @@ from socketserver import StreamRequestHandler, TCPServer
 
 
 class TCPHandler(StreamRequestHandler):
-    pass
+    def handle(self):  # Método abstrato de StreamRequestHandler
+        self.wfile.write(b'Ola, Cliente!\n')
 
 
 if __name__ == "__main__":
