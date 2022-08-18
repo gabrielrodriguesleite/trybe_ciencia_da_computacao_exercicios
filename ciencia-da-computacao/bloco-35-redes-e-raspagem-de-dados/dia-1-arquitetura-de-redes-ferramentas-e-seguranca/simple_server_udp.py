@@ -1,4 +1,3 @@
-
 from socketserver import DatagramRequestHandler, UDPServer
 
 
@@ -13,3 +12,7 @@ if __name__ == "__main__":
     server_address = ("localhost", 9093)
     with UDPServer(server_address, UDPHandler) as server:
         server.serve_forever()
+
+
+# nc -u localhost 9093
+# não funcionou, códico conferido mas não teve jeito

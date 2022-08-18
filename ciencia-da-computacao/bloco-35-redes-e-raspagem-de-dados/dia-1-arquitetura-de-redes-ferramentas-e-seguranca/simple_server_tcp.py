@@ -16,4 +16,5 @@ class TCPHandler(StreamRequestHandler):
 if __name__ == "__main__":
     server_address = ("localhost", 8080)
     with TCPServer(server_address, TCPHandler) as server:
+        print("O server está ON")
         server.serve_forever()
