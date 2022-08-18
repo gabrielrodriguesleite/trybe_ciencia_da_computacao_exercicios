@@ -19,6 +19,12 @@ class ICMS(EstrategiaDeImposto):
         return valor * 0.06
 
 
+class PIS(EstrategiaDeImposto):
+    @classmethod
+    def calcular(cls, valor):
+        return valor * 0.0065
+
+
 class Orcamento:
     def __init__(self, valor):
         self.valor = valor
