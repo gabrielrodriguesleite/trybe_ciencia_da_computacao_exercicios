@@ -18,7 +18,7 @@ def rank_published_books():
                 else:
                     rank[cat] += 1
 
-    print(rank)
+    print(sorted(rank.items(), key=lambda x: x[1]))
 
 
 if __name__ == "__main__":
