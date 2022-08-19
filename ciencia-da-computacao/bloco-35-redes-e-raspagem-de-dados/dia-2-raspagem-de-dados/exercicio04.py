@@ -15,7 +15,7 @@ if __name__ == "__main__":
     ).text
     sel = Selector(data)
     title = sel.css("div.col-sm-6 > h1::text").get()
-    price = ""
+    price = sel.css("p.price_color::text").re_first(r"\d+\.\d{2}")
     description = ""
     image_url = ""
-    print(title, price, description, image_url)
+    print(title, price, description, image_url, sep=",")
