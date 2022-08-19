@@ -18,7 +18,10 @@ def rank_published_books():
                 else:
                     rank[cat] += 1
 
-    print(sorted(rank.items(), key=lambda x: x[1]))
+    # sorted usa a key como referencia pra ordenação
+    # lambda recebe item como parametro x e retorna o 2° valor
+    # que nesse caso é a quantidade, dict transforma tuplas em dicionário
+    print(dict(sorted(rank.items(), key=lambda x: x[1], reverse=True)))
 
 
 if __name__ == "__main__":
