@@ -20,4 +20,5 @@ if __name__ == "__main__":
     description = sel.css("article > p::text").get()
     description = description[:-len(" ...more")]
     image_url = BASE_URL + sel.css("div.thumbnail img::attr(src)").get()
-    print(title, price, description, image_url, sep=",")
+    quantity = sel.css("p.instock.availability::text").re_first(r"\d")
+    print(title, price, description, image_url, quantity, sep=",")
