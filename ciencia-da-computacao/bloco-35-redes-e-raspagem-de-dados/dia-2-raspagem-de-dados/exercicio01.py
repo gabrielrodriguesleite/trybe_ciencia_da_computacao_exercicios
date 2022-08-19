@@ -1,7 +1,9 @@
+import requests
 
 
 def main():
-    pass
+    data = requests.get('https://httpbin.org/encoding/utf8')
+    print(data.text)
 
 
 if __name__ == '__main__':
